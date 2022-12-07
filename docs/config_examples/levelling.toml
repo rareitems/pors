@@ -1,0 +1,47 @@
+# Configuration for Flask1
+[Flask1]
+kind = "Duration" # Type of the flask, utility flasks can be 'NonDuration', life and mana flasks are 'Duration'
+duration = 1500   # If type is 'NonDuration' does not have to exist
+
+# Configuration for Flask2, same as Flask1
+[Flask2]
+kind = "Duration"
+duration = 1500
+
+# Configuration for Flask2, same as Flask1
+[Flask3]
+kind = "Duration"
+duration = 2000
+
+# Configuration for Flask2, same as Flask1
+[Flask4]
+kind = "NonDuration"
+
+# Configuration for Flask2, same as Flask1
+[Flask5]
+kind = "NonDuration"
+
+# Configuration for Skill2
+[Skill2]
+active = false
+
+# Configuration for Skill3
+[Skill3]
+active = false
+
+
+[Keymaps]
+normal = [
+  { key = "KEY_D", action = "FlaskPop", args = ["2"] }, # when D is clicked, it will try to use the flasks in second slot
+  { key = "KEY_F", action = "FlaskPop", args = ["3", "4"] }, # when F is clicked, it will try to rotate between the flasks in 3rd and 4th slot
+]
+
+[Triggers]
+byHealth = [
+  { perc = 75, actions = ["Flask1SC", "Flask2SC"] },
+  #
+]
+byMana = [
+  { perc = 45, actions = ["Flask3"] },
+  #
+]

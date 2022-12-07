@@ -1,0 +1,50 @@
+[Flask1]
+kind = "Duration"
+duration = 2000
+
+[Flask2]
+kind = "Duration"
+duration = 2000
+
+[Flask3]
+kind = "Duration"
+duration = 1000
+
+[Flask4]
+kind = "NonDuration"
+
+[Flask5]
+kind = "NonDuration"
+
+[Skill2]
+active = true
+
+[Skill3]
+active = true
+
+
+# https://github.com/emberian/evdev/blob/1d020f11b283b0648427a2844b6b980f1a268221/src/scancodes.rs#L26-L572
+
+[Keymaps]
+normal = [
+  { key = "KEY_W", action = "FlaskRotate", args = ["1", "2"] },
+]
+# withShift = [{ key = "KEY_R", action = "PopFlask", args = ["A"] }]
+
+[Triggers]
+byHealth = [
+  { perc = 75, actions = [
+    "Flask1SC",
+    "Flask2SC",
+  ] },
+
+  { perc = 70, actions = [
+    "Skill2",
+  ] },
+
+  { perc = 65, actions = [
+    "Skill1",
+  ] },
+
+]
+# byMana = [{ perc = 45, actions = ["Flask3"] }]

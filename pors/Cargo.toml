@@ -1,0 +1,17 @@
+[package]
+name = "pors"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["rt", "time", "macros"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+color-eyre = { workspace = true }
+arrayvec = { workspace = true }
+makro = { path = "../makro" }
+poe = { path = "../poe" }
+overlay = { path = "../overlay" }
+config = { path = "../config" }

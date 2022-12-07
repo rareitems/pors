@@ -1,0 +1,26 @@
+[package]
+name = "makro"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+evdev = { version = "0.12", features = ["serde", "tokio"] }
+x11rb = { version = "0.11" }
+arboard = { version = "3.2" }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+color-eyre = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+serial_test = "0.9"
+xshell = "0.2"
+criterion = { version = "0.4.0" }
+
+
+[[bench]]
+name = "chunks"
+harness = false
+

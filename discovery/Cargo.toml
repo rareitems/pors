@@ -1,0 +1,19 @@
+[package]
+name = "discovery"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+makro = { path = "../makro" }
+overlay = { path = "../overlay" }
+poe = { path = "../poe" }
+arboard = "3"
+
+[dev-dependencies]
+criterion = { version = "0.4.0" }
+
+[[bench]]
+name = "inv"
+harness = false

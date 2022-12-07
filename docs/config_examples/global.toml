@@ -1,0 +1,20 @@
+# path to the keyboard device, can be checked using 'evtest'
+device_path = "/dev/input/event1"
+
+# keycodes list, can also be checked using 'evtest'
+# https://github.com/emberian/evdev/blob/master/src/scancodes.rs
+
+# keys for skills in-game, used in character config
+# does not have to exit
+# [keys_skills]
+# skill2 = "KEY_A"
+# skill3 = "KEY_S"
+
+# keys for flasks in-game, used in character config
+# has to exist
+[keys_flasks]
+slot1 = "KEY_1"
+slot2 = "KEY_2"
+slot3 = "KEY_3"
+slot4 = "KEY_4"
+slot5 = "KEY_5"
